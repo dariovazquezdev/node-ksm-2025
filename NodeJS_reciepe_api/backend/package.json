@@ -1,0 +1,37 @@
+{
+  "name": "socialmediaapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit --runInBand",
+    "start": "nodemon index.js",
+    "sample_tests": "jest --forceExit --runInBand --verbose --ci --testResultsProcessor=\"jest-junit\" -- sample.test.js",
+    "main_tests": "jest --forceExit --runInBand --verbose --ci --testResultsProcessor=\"jest-junit\" -- index.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.2.0",
+    "jest-junit": "^12.2.0",
+    "jest-junit-reporter": "^1.1.0",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
+  },
+  "jest-junit": {
+    "suiteName": "jest tests",
+    "outputDirectory": ".",
+    "outputName": "xunittest-report.xml",
+    "uniqueOutputName": "false",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}",
+    "ancestorSeparator": " › ",
+    "usePathForSuiteName": "true"
+  }
+}
